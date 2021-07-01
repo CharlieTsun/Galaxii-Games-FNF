@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BlockGuyGalaxii_Assets.png">
+	<!-- Created with Adobe Animate version 21.0.7.42652 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BlockGuyDown0000" x="0" y="0" width="284" height="486" frameX="0" frameY="-7" frameWidth="284" frameHeight="568"/>
+	<SubTexture name="BlockGuyDown0001" x="284" y="0" width="272" height="512" frameX="-9" frameY="0" frameWidth="284" frameHeight="568"/>
+	<SubTexture name="BlockGuyDown0002" x="556" y="0" width="272" height="497" frameX="-9" frameY="-19" frameWidth="284" frameHeight="568"/>
+	<SubTexture name="BlockGuyDown0003" x="828" y="0" width="272" height="480" frameX="-9" frameY="-30" frameWidth="284" frameHeight="568"/>
+	<SubTexture name="BlockGuyDown0004" x="1100" y="0" width="272" height="485" frameX="-9" frameY="-45" frameWidth="284" frameHeight="568"/>
+	<SubTexture name="BlockGuyDown0005" x="1372" y="0" width="272" height="492" frameX="-9" frameY="-60" frameWidth="284" frameHeight="568"/>
+	<SubTexture name="BlockGuyDown0006" x="1644" y="0" width="272" height="494" frameX="-9" frameY="-74" frameWidth="284" frameHeight="568"/>
+	<SubTexture name="BlockGuyIdle0000" x="1916" y="0" width="283" height="512" frameX="-8" frameY="0" frameWidth="296" frameHeight="527"/>
+	<SubTexture name="BlockGuyIdle0001" x="2199" y="0" width="296" height="505" frameX="0" frameY="-19" frameWidth="296" frameHeight="527"/>
+	<SubTexture name="BlockGuyIdle0002" x="2495" y="0" width="293" height="513" frameX="-1" frameY="-14" frameWidth="296" frameHeight="527"/>
+	<SubTexture name="BlockGuyIdle0003" x="2788" y="0" width="287" height="494" frameX="-4" frameY="-4" frameWidth="296" frameHeight="527"/>
+	<SubTexture name="BlockGuyIdle0004" x="3075" y="0" width="283" height="485" frameX="-8" frameY="0" frameWidth="296" frameHeight="527"/>
+	<SubTexture name="BlockGuyIdle0005" x="3358" y="0" width="283" height="498" frameX="-8" frameY="0" frameWidth="296" frameHeight="527"/>
+	<SubTexture name="BlockGuyIdle0006" x="1916" y="0" width="283" height="512" frameX="-8" frameY="0" frameWidth="296" frameHeight="527"/>
+	<SubTexture name="BlockGuyLeft0000" x="3641" y="0" width="321" height="475" frameX="-23" frameY="-16" frameWidth="354" frameHeight="491"/>
+	<SubTexture name="BlockGuyLeft0001" x="0" y="513" width="307" height="482" frameX="-32" frameY="0" frameWidth="354" frameHeight="491"/>
+	<SubTexture name="BlockGuyLeft0002" x="307" y="513" width="308" height="466" frameX="-46" frameY="-4" frameWidth="354" frameHeight="491"/>
+	<SubTexture name="BlockGuyLeft0003" x="615" y="513" width="308" height="464" frameX="-35" frameY="-4" frameWidth="354" frameHeight="491"/>
+	<SubTexture name="BlockGuyLeft0004" x="923" y="513" width="308" height="466" frameX="-24" frameY="-4" frameWidth="354" frameHeight="491"/>
+	<SubTexture name="BlockGuyLeft0005" x="1231" y="513" width="308" height="463" frameX="-13" frameY="-4" frameWidth="354" frameHeight="491"/>
+	<SubTexture name="BlockGuyLeft0006" x="1539" y="513" width="308" height="461" frameX="0" frameY="-4" frameWidth="354" frameHeight="491"/>
+	<SubTexture name="BlockGuyRight0000" x="1847" y="513" width="298" height="458" frameX="-4" frameY="-15" frameWidth="334" frameHeight="483"/>
+	<SubTexture name="BlockGuyRight0001" x="2145" y="513" width="286" height="482" frameX="-6" frameY="0" frameWidth="334" frameHeight="483"/>
+	<SubTexture name="BlockGuyRight0002" x="2431" y="513" width="293" height="479" frameX="0" frameY="-4" frameWidth="334" frameHeight="483"/>
+	<SubTexture name="BlockGuyRight0003" x="2724" y="513" width="301" height="474" frameX="0" frameY="-9" frameWidth="334" frameHeight="483"/>
+	<SubTexture name="BlockGuyRight0004" x="3025" y="513" width="301" height="472" frameX="-8" frameY="-9" frameWidth="334" frameHeight="483"/>
+	<SubTexture name="BlockGuyRight0005" x="3326" y="513" width="301" height="469" frameX="-16" frameY="-9" frameWidth="334" frameHeight="483"/>
+	<SubTexture name="BlockGuyRight0006" x="3627" y="513" width="301" height="468" frameX="-33" frameY="-9" frameWidth="334" frameHeight="483"/>
+	<SubTexture name="BlockGuyUp0000" x="0" y="995" width="330" height="504" frameX="0" frameY="-64" frameWidth="330" frameHeight="603"/>
+	<SubTexture name="BlockGuyUp0001" x="330" y="995" width="317" height="530" frameX="-7" frameY="-56" frameWidth="330" frameHeight="603"/>
+	<SubTexture name="BlockGuyUp0002" x="647" y="995" width="317" height="541" frameX="-7" frameY="-55" frameWidth="330" frameHeight="603"/>
+	<SubTexture name="BlockGuyUp0003" x="964" y="995" width="317" height="561" frameX="-7" frameY="-42" frameWidth="330" frameHeight="603"/>
+	<SubTexture name="BlockGuyUp0004" x="1281" y="995" width="317" height="556" frameX="-7" frameY="-28" frameWidth="330" frameHeight="603"/>
+	<SubTexture name="BlockGuyUp0005" x="1598" y="995" width="317" height="541" frameX="-7" frameY="-14" frameWidth="330" frameHeight="603"/>
+	<SubTexture name="BlockGuyUp0006" x="1915" y="995" width="317" height="546" frameX="-7" frameY="0" frameWidth="330" frameHeight="603"/>
+</TextureAtlas>
