@@ -736,6 +736,26 @@ class PlayState extends MusicBeatState
 	
 						add(stageCurtains);
 				}
+			case 'galaxii':
+				{
+					defaultCamZoom = 0.9;
+					curStage = 'galaxii';
+					var galbg:FlxSprite = new FlxSprite(-250, -500).loadGraphic(Paths.image('galaxiibgback'));
+					galbg.antialiasing = true;
+					galbg.scrollFactor.set(0.9, 0.9);
+					galbg.setGraphicSize(Std.int(galbg.width * 1.1));
+					galbg.updateHitbox();
+					galbg.active = false;
+					add(galbg);
+		
+					var galfront:FlxSprite = new FlxSprite(-250, -500).loadGraphic(Paths.image('galaxiibgfront'));
+					galfront.antialiasing = true;
+					galfront.scrollFactor.set(0.9, 0.9);
+					galfront.setGraphicSize(Std.int(galfront.width * 1.1));
+					galfront.updateHitbox();
+					galfront.active = false;
+					add(galfront);
+				}
 			default:
 			{
 					defaultCamZoom = 0.9;
