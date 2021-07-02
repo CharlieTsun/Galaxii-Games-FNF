@@ -30,6 +30,7 @@ class DialogueBox extends FlxSpriteGroup
 
 	var portraitLeft:FlxSprite;
 	var portraitRight:FlxSprite;
+	var funnychar:FlxSprite;
 
 	var handSelect:FlxSprite;
 	var bgFade:FlxSprite;
@@ -74,9 +75,9 @@ class DialogueBox extends FlxSpriteGroup
 				hasDialog = true;
 				FlxG.sound.play(Paths.sound('ANGRY_TEXT_BOX'));
 
-				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-senpaiMad');
-				box.animation.addByPrefix('normalOpen', 'SENPAI ANGRY IMPACT SPEECH', 24, false);
-				box.animation.addByIndices('normal', 'SENPAI ANGRY IMPACT SPEECH', [4], "", 24);
+				box.frames = Paths.getSparrowAtlas('weeb/pixelUI/dialogueBox-pixel');
+				box.animation.addByPrefix('normalOpen', 'Text Box Appear', 24, false);
+				box.animation.addByIndices('normal', 'Text Box Appear', [4], "", 24);
 
 			case 'thorns':
 				hasDialog = true;
@@ -86,7 +87,6 @@ class DialogueBox extends FlxSpriteGroup
 
 				var face:FlxSprite = new FlxSprite(320, 170).loadGraphic(Paths.image('weeb/spiritFaceForward'));
 				face.setGraphicSize(Std.int(face.width * 6));
-				add(face);
 		}
 
 		this.dialogueList = dialogueList;
@@ -111,6 +111,18 @@ class DialogueBox extends FlxSpriteGroup
 		portraitRight.scrollFactor.set();
 		add(portraitRight);
 		portraitRight.visible = false;
+
+		funnychar = new FlxSprite(0, 0);
+		funnychar.frames = Paths.getSparrowAtlas('Portrait_Assets');
+		portraitLeft.setGraphicSize(Std.int(portraitLeft.width * PlayState.daPixelZoom * 0.4));
+		funnychar.animation.addByPrefix('bf-pixel', 'pixel bf', 24, false);
+		funnychar.animation.addByPrefix('senpai', 'senpai enter', 24, false);
+		funnychar.animation.addByPrefix('senpai-pissed', 'senpai pissed enter', 24, false);
+		funnychar.animation.addByPrefix('spirit', 'spirit anim', 24, false);
+		funnychar.updateHitbox();
+		funnychar.scrollFactor.set();
+		add(funnychar);
+		funnychar.visible = true;
 		
 		box.animation.play('normalOpen');
 		box.setGraphicSize(Std.int(box.width * PlayState.daPixelZoom * 0.9));
@@ -177,11 +189,18 @@ class DialogueBox extends FlxSpriteGroup
 			dialogueStarted = true;
 		}
 
-		if (PlayerSettings.player1.controls.ACCEPT && dialogueStarted == true)
+		if (FlxG.keys.justPressed.ANY  && dialogueStarted == true)
 		{
 			remove(dialogue);
 				
 			FlxG.sound.play(Paths.sound('clickText'), 0.8);
+
+			funnychar.alpha = 0;
+
+			new FlxTimer().start(0.01, function(tmr:FlxTimer)
+				{
+					funnychar.alpha += 1 / 5;
+				}, 5);
 
 			if (dialogueList[1] == null && dialogueList[0] != null)
 			{
@@ -198,6 +217,7 @@ class DialogueBox extends FlxSpriteGroup
 						bgFade.alpha -= 1 / 5 * 0.7;
 						portraitLeft.visible = false;
 						portraitRight.visible = false;
+						funnychar.visible = false;
 						swagDialogue.alpha -= 1 / 5;
 						dropText.alpha = swagDialogue.alpha;
 					}, 5);
@@ -234,20 +254,28 @@ class DialogueBox extends FlxSpriteGroup
 
 		switch (curCharacter)
 		{
-			case 'dad':
-				portraitRight.visible = false;
-				if (!portraitLeft.visible)
-				{
-					portraitLeft.visible = true;
-					portraitLeft.animation.play('enter');
-				}
-			case 'bf':
-				portraitLeft.visible = false;
-				if (!portraitRight.visible)
-				{
-					portraitRight.visible = true;
-					portraitRight.animation.play('enter');
-				}
+			case 'senpai':
+				funnychar.animation.play('senpai');
+			case 'spirit':
+				funnychar.animation.play('spirit');
+			case 'bf-pixel':
+				funnychar.animation.play('bf-pixel');
+			case 'senpai-pissed':
+				funnychar.animation.play('senpai-pissed');
+		}
+
+//offset shit
+		switch (curCharacter)
+		{
+			case 'bf-pixel':
+				funnychar.x = 800;
+				funnychar.y = 220;
+			case 'spirit':
+				funnychar.x = 140;
+				funnychar.y = -50;
+			default:
+				funnychar.x = 100;
+				funnychar.y = 160;
 		}
 	}
 
